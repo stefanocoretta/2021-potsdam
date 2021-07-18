@@ -1,0 +1,22 @@
+---
+title: "The more we learn the less we know"
+subtitle: "(Un)resolved questions on the voicing effect"
+author: "Stefano Coretta"
+institute: "IPS @ LMU Munich"
+date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: 16:9
+      beforeInit: "macros.js"
+---
+
+class: center middle
+
+# ~ Voicing effect ~
+
+![](img/voicing-effect.png)
