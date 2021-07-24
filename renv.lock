@@ -443,6 +443,13 @@
       "Repository": "CRAN",
       "Hash": "e3d73becdeb92754d27172d278cbf61d"
     },
+    "leaflet.minicharts": {
+      "Package": "leaflet.minicharts",
+      "Version": "0.6.2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "8d9d7f2979326e875c0e6094d99a1fdf"
+    },
     "leaflet.providers": {
       "Package": "leaflet.providers",
       "Version": "1.9.0",
@@ -456,6 +463,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "3471fb65971f1a7b2d4ae7848cf2db8d"
+    },
+    "lingtypology": {
+      "Package": "lingtypology",
+      "Version": "1.1.5",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "88b950c35d3ca89082ce12e7c644e615"
     },
     "lubridate": {
       "Package": "lubridate",
@@ -722,6 +736,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "dfd843ee98246cf932823acf613b05dd"
+    },
+    "stringdist": {
+      "Package": "stringdist",
+      "Version": "0.9.6.3",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "1ab14e88df14b856dd4d2e34a80c0ba6"
     },
     "stringi": {
       "Package": "stringi",

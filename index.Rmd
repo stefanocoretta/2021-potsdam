@@ -15,13 +15,16 @@ output:
       beforeInit: "macros.js"
 ---
 
-```{r setup}
+```{r setup, include=FALSE}
 library(tidyverse)
 library(sf)
 library(rnaturalearth)
 library(leaflet)
 library(sf)
 library(lingtypology)
+library(RColorBrewer)
+library(xaringanExtra)
+use_xaringan_extra(c("panelset", "tachyons"))
 ```
 
 
@@ -38,13 +41,20 @@ langs <- c("English", "German", "French", "Hungarian", "Gulf Arabic", "Assamese"
 
 longs <- long.lang(langs)
 lats <- lat.lang(langs)
+fams <- str_split_fixed(aff.lang(langs), ",", n = Inf)[,1]
 
-ve_langs <- tibble(longs, lats) %>%
+ve_langs <- tibble(longs, lats, fams) %>%
   st_as_sf(coords = c("longs", "lats"))
+
+pal <- colorFactor(
+  brewer.pal(7, "Accent"),
+  domain = unique(ve_langs$fams)
+)
 
 leaflet(ve_langs) %>% 
   addTiles() %>%
-  addCircleMarkers(stroke = FALSE, fillOpacity = 0.8)
+  addCircleMarkers(stroke = FALSE, fillOpacity = 0.8, color = ~pal(fams)) %>%
+  addLegend(pal = pal, values = ~fams, title = "Family")
 ```
 
 ---
@@ -63,3 +73,121 @@ leaflet(ve_langs) %>%
 
 # Voicing as a linguistic contrast
 
+
+---
+
+# Cross-linguistic differences
+
+---
+
+# Phonologisation
+
+.panelset[
+.panel[.panel-name[Structuralism]
+
+.pull-left[
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[
+
+Phonologisation is the creation of a new phonemic contrast, or in other words when a contextual allophone becomes *contrastive* (i.e. a phoneme).
+
+]
+
+.tr[
+— Kiparsky 2015
+]
+]
+
+.pull-right[
+![](img/phonologisation-structuralist.png)
+]
+
+]
+
+.panel[.panel-name[Lexical Ph]
+.bg-washed-blue.b--dark-blue.ba.bw2.br3.shadow-5.ph4.mt5[
+
+A process is phonologised when it goes from being applied post-lexically to being applied lexically.
+
+]
+
+.tr[
+— Kiparsky 1988
+]
+
+]
+
+.panel[.panel-name[Stratal OT]
+
+.pull-left[
+.bg-washed-yellow.b--gold.ba.bw2.br3.shadow-5.ph4.mt5[
+
+Phonologisation occurs when the constraint ordering of the (post-lexical) phrasal domain is copied over onto the (lexical) word and stem domains.
+
+]
+
+.tr[
+— Kiparsky 2000, Bermúdez-Otero 2017
+]
+]
+
+.pull-right[
+![](img/phonologisation-stratal-ot.png)
+]
+
+]
+
+.panel[.panel-name[Life Cycle]
+
+.pull-left[
+.bg-near-white.b--purple.ba.bw2.br3.shadow-5.ph4.mt5[
+
+Phonologisation occurs when a physio-anatomical ("mechanic") phenomenon comes under the control of the speaker/hearer and becomes part of their grammar (more specifically, part of the *phonetic module* of the grammar).
+
+]
+
+.tr[
+— Bermúdez-Otero 2007, Bermúdez-Otero 2015
+]
+]
+
+.pull-right[
+![](img/bermudez-otero-trousdale-2012.png)
+]
+
+]
+
+.panel[.panel-name[Exemplar-based]
+
+.pull-left[
+.bg-washed-yellow.b--orange.ba.bw2.br3.shadow-5.ph4.mt5[
+
+Every type of sound variation/alternation is "phonologised" (i.e. neuro-cognitive permanence) as soon as it is experienced by the speaker/hearer *and* stored in memory.
+
+]
+
+.tr[
+— Johnson 1997, Sóskuthy et al. 2018, Ambridge 2018, Todd et al. 2019
+]
+]
+
+.pull-right[
+![](img/soskuthy2013-183.png)
+
+— Sóskuthy 2013:183
+
+]
+
+]
+
+]
+
+
+
+---
+
+# Contextual effects (within-system)
+
+
+---
+
+# (Attempted) meta-analysis
