@@ -37,31 +37,6 @@ class: center middle
 
 ---
 
-class: middle
-
-```{r ve-map, echo=FALSE}
-langs <- c("English", "German", "French", "Hungarian", "Gulf Arabic", "Assamese", "Bengali", "Dutch", "Georgian", "Hindi", "Italian", "Icelandic", "Japanese", "Korean", "Lithuanian", "Norwegian", "Spanish", "Swedish", "Telugu", "Russian", "Czech", "Polish")
-
-longs <- long.lang(langs)
-lats <- lat.lang(langs)
-fams <- str_split_fixed(aff.lang(langs), ",", n = Inf)[,1]
-
-ve_langs <- tibble(longs, lats, fams) %>%
-  st_as_sf(coords = c("longs", "lats"))
-
-pal <- colorFactor(
-  brewer.pal(7, "Accent"),
-  domain = unique(ve_langs$fams)
-)
-
-leaflet(ve_langs) %>% 
-  addTiles() %>%
-  addCircleMarkers(stroke = FALSE, fillOpacity = 0.8, color = ~pal(fams)) %>%
-  addLegend(pal = pal, values = ~fams, title = "Family")
-```
-
----
-
 # What is "voicing"?
 
 ![](img/voicing.png)
@@ -119,9 +94,73 @@ Cyclic vibration of the vocal folds.
 
 ---
 
+VE in whispered speech.
+
+VE in word-final-devoicing languages.
+
+---
+
+class: inverse center middle
+
+# SLIDO
+
+
+---
+
+# Myths
+
+- The voicing effect is a very common phenomenon.
+
+- Polish and Czech do not show a voicing effect.
+
+- The magnitude of the voicing effect in English is greater relative to that of other languages.
+
+- The ratio of Vowel to Consonant duration is stable across speech rates.
+
+---
+
+# How common is the voicing effect?
+
+class: middle
+
+```{r ve-map, echo=FALSE}
+langs <- c("English", "German", "French", "Hungarian", "Gulf Arabic", "Assamese", "Bengali", "Dutch", "Georgian", "Hindi", "Italian", "Icelandic", "Japanese", "Korean", "Lithuanian", "Norwegian", "Spanish", "Swedish", "Telugu", "Russian", "Czech", "Polish")
+
+longs <- long.lang(langs)
+lats <- lat.lang(langs)
+fams <- str_split_fixed(aff.lang(langs), ",", n = Inf)[,1]
+
+ve_langs <- tibble(longs, lats, fams) %>%
+  st_as_sf(coords = c("longs", "lats"))
+
+pal <- colorFactor(
+  brewer.pal(7, "Accent"),
+  domain = unique(ve_langs$fams)
+)
+
+leaflet(ve_langs) %>% 
+  addTiles() %>%
+  addCircleMarkers(stroke = FALSE, fillOpacity = 0.8, color = ~pal(fams)) %>%
+  addLegend(pal = pal, values = ~fams, title = "Family")
+```
+
+---
+
 # Cross-linguistic differences
 
 .center[![](img/some-more-comparative.jpg)]
+
+---
+
+# Comparative studies
+
+
+
+---
+
+# Comparison of English, Italian, Polish
+
+
 
 ---
 
@@ -232,7 +271,43 @@ Every type of sound variation/alternation is "phonologised" (i.e. neuro-cognitiv
 
 # Contextual effects (within-system)
 
+- Greater effect in pre-pausal words.
+
+- Greater effect in stressed vowels.
+
+- Greater effect in word-final syllables.
+
+- Greater effect in word-initial syllables along the hierarchy trisyllabic > disyllabic > monosyllabic.
+
+- Greater effect in lower vowels.
+
+--
+
+They all have in common greater baseline vowel duration.
+
+---
+
+# Contextual effects (within-system)
+
+Manner
+
+- Stop vs fricative.
+
+- Obstruent vs sonorant.
+
+--
+
+Mixed results.
+
+
+
 
 ---
 
 # (Attempted) meta-analysis
+
+---
+
+# Accounts
+
+But what is the explanandum?
