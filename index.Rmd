@@ -16,6 +16,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
 library(sf)
 library(rnaturalearth)
@@ -36,7 +37,9 @@ class: center middle
 
 ---
 
-```{r}
+class: middle
+
+```{r ve-map, echo=FALSE}
 langs <- c("English", "German", "French", "Hungarian", "Gulf Arabic", "Assamese", "Bengali", "Dutch", "Georgian", "Hindi", "Italian", "Icelandic", "Japanese", "Korean", "Lithuanian", "Norwegian", "Spanish", "Swedish", "Telugu", "Russian", "Czech", "Polish")
 
 longs <- long.lang(langs)
@@ -68,15 +71,57 @@ leaflet(ve_langs) %>%
 
 # Voicing as a physical property
 
+.pull-left[
+.center.f1.small-caps[acoustic]
+
+Periodicity in the speech signal.
+
+![](img/periodic-waveform.png)
+
+]
+
+.pull-right[
+.center.f1.small-caps[articulatory]
+
+Cyclic vibration of the vocal folds.
+
+<br>
+
+![](img/thomas2016-vocal-folds.jpg)
+
+.f6.pull-right[CC BY-NC-SA 3.0 James Thomas]
+]
 
 ---
 
 # Voicing as a linguistic contrast
 
+.pull-left[
+.center.f2.small-caps[language-particular category]
+
+- Northern Italian: /loto/ 'lotus' ~ /lodo/ 'I praise'
+  - /t/: [t]
+  - /d/: [d]
+
+- Spanish: // ~ //
+
+- Mawayana: // ~ //
+
+- Nalöngo: /da/ 'thing' ~ /ta/ 'fall'
+  - /t/: [t] - [tʰ] - [ɾ]
+  - /d/: [ⁿd] - [d]
+
+]
+
+.pull-right[
+.center.f2.small-caps[comparative concept]
+]
 
 ---
 
 # Cross-linguistic differences
+
+.center[![](img/some-more-comparative.jpg)]
 
 ---
 

@@ -28,7 +28,7 @@ class: center, middle, inverse, title-slide
 ## (Un)resolved questions on the voicing effect
 ### Stefano Coretta
 ### IPS @ LMU Munich
-### 2016/12/12 (updated: 2021-07-24)
+### 2016/12/12 (updated: 2021-07-25)
 
 ---
 
@@ -44,30 +44,10 @@ class: center middle
 
 ---
 
+class: middle
 
-```r
-langs &lt;- c("English", "German", "French", "Hungarian", "Gulf Arabic", "Assamese", "Bengali", "Dutch", "Georgian", "Hindi", "Italian", "Icelandic", "Japanese", "Korean", "Lithuanian", "Norwegian", "Spanish", "Swedish", "Telugu", "Russian", "Czech", "Polish")
-
-longs &lt;- long.lang(langs)
-lats &lt;- lat.lang(langs)
-fams &lt;- str_split_fixed(aff.lang(langs), ",", n = Inf)[,1]
-
-ve_langs &lt;- tibble(longs, lats, fams) %&gt;%
-  st_as_sf(coords = c("longs", "lats"))
-
-pal &lt;- colorFactor(
-  brewer.pal(7, "Accent"),
-  domain = unique(ve_langs$fams)
-)
-
-leaflet(ve_langs) %&gt;% 
-  addTiles() %&gt;%
-  addCircleMarkers(stroke = FALSE, fillOpacity = 0.8, color = ~pal(fams)) %&gt;%
-  addLegend(pal = pal, values = ~fams, title = "Family")
-```
-
-<div id="htmlwidget-0cbab2ead93f19a1d426" style="width:504px;height:504px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0cbab2ead93f19a1d426">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[53,48.649,48,46.9068585714,30.17,26.0876,24,52,41.850397,25,43.0464,63.4837,35,37.5,55.1429,59.92,40.4414,59.800634,16.4529,59,49.873398,51.8439],[-1,12.4676,2,19.6555271429,47.5,91.2932,90,5,43.78613,77,12.6489,-19.0212,135,128,23.9601,10.71,-1.11788,17.389526,78.7024,50,15.10437,18.6255],10,null,null,{"interactive":true,"className":"","stroke":false,"color":["#FDC086","#FDC086","#FDC086","#BF5B17","#7FC97F","#FDC086","#FDC086","#FDC086","#386CB0","#FDC086","#FDC086","#FDC086","#FFFF99","#F0027F","#FDC086","#FDC086","#FDC086","#FDC086","#BEAED4","#FDC086","#FDC086","#FDC086"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["#FDC086","#FDC086","#FDC086","#BF5B17","#7FC97F","#FDC086","#FDC086","#FDC086","#386CB0","#FDC086","#FDC086","#FDC086","#FFFF99","#F0027F","#FDC086","#FDC086","#FDC086","#FDC086","#BEAED4","#FDC086","#FDC086","#FDC086"],"fillOpacity":0.8},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#7FC97F","#BEAED4","#FDC086","#FFFF99","#386CB0","#F0027F","#BF5B17"],"labels":["Afro-Asiatic","Dravidian","Indo-European","Japonic","Kartvelian","Koreanic","Uralic"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"topright","type":"factor","title":"Family","extra":null,"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[16.4529,63.4837],"lng":[-19.0212,135]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-4dfd1564a4baefeed572" style="width:504px;height:504px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4dfd1564a4baefeed572">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addCircleMarkers","args":[[53,48.649,48,46.9068585714,30.17,26.0876,24,52,41.850397,25,43.0464,63.4837,35,37.5,55.1429,59.92,40.4414,59.800634,16.4529,59,49.873398,51.8439],[-1,12.4676,2,19.6555271429,47.5,91.2932,90,5,43.78613,77,12.6489,-19.0212,135,128,23.9601,10.71,-1.11788,17.389526,78.7024,50,15.10437,18.6255],10,null,null,{"interactive":true,"className":"","stroke":false,"color":["#FDC086","#FDC086","#FDC086","#BF5B17","#7FC97F","#FDC086","#FDC086","#FDC086","#386CB0","#FDC086","#FDC086","#FDC086","#FFFF99","#F0027F","#FDC086","#FDC086","#FDC086","#FDC086","#BEAED4","#FDC086","#FDC086","#FDC086"],"weight":5,"opacity":0.5,"fill":true,"fillColor":["#FDC086","#FDC086","#FDC086","#BF5B17","#7FC97F","#FDC086","#FDC086","#FDC086","#386CB0","#FDC086","#FDC086","#FDC086","#FFFF99","#F0027F","#FDC086","#FDC086","#FDC086","#FDC086","#BEAED4","#FDC086","#FDC086","#FDC086"],"fillOpacity":0.8},null,null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#7FC97F","#BEAED4","#FDC086","#FFFF99","#386CB0","#F0027F","#BF5B17"],"labels":["Afro-Asiatic","Dravidian","Indo-European","Japonic","Kartvelian","Koreanic","Uralic"],"na_color":null,"na_label":"NA","opacity":0.5,"position":"topright","type":"factor","title":"Family","extra":null,"layerId":null,"className":"info legend","group":null}]}],"limits":{"lat":[16.4529,63.4837],"lng":[-19.0212,135]}},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -80,15 +60,41 @@ leaflet(ve_langs) %&gt;%
 
 # Voicing as a physical property
 
+.pull-left[
+.center.f1.small-caps[acoustic]
+
+Periodicity in speech signal.
+]
+
+.pull-right[
+.center.f1.small-caps[articulatory]
+
+Cyclic vibration of the vocal folds.
+
+&lt;br&gt;
+
+![](img/thomas2016-vocal-folds.jpg)
+
+.f6.pull-right[CC BY-NC-SA 3.0 James Thomas]
+]
 
 ---
 
 # Voicing as a linguistic contrast
 
+.pull-left[
+.center.f2.small-caps[language-particular category]
+]
+
+.pull-right[
+.center.f2.small-caps[comparative concept]
+]
 
 ---
 
 # Cross-linguistic differences
+
+.center[![](img/some-more-comparative.jpg)]
 
 ---
 
