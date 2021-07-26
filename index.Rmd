@@ -11,7 +11,7 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-      ratio: 16:9
+      ratio: "16:9"
       beforeInit: "macros.js"
 ---
 
@@ -39,7 +39,9 @@ class: center middle
 
 # What is "voicing"?
 
-![](img/voicing.png)
+.center[
+![:scale 70%](img/voicing.png)
+]
 
 
 ---
@@ -47,18 +49,19 @@ class: center middle
 # Voicing as a physical property
 
 .pull-left[
-.center.f1.small-caps[acoustic]
+.center.f1.small-caps.bg-washed-green.ba.bw2.br3.b--dark-green[acoustic]
 
-Periodicity in the speech signal.
+.center[Periodicity in the speech signal.]
+
 
 ![](img/periodic-waveform.png)
 
 ]
 
 .pull-right[
-.center.f1.small-caps[articulatory]
+.center.f1.small-caps.bg-washed-red.b--dark-red.ba.bw2.br3[articulatory]
 
-Cyclic vibration of the vocal folds.
+.center[Cyclic vibration of the vocal folds.]
 
 <br>
 
@@ -71,57 +74,99 @@ Cyclic vibration of the vocal folds.
 
 # Voicing as a linguistic contrast
 
+.f6[(Haspelmath 2010, 2015, 2020, 2021)]
+
 .pull-left[
 .center.f2.small-caps[language-particular category]
 
-- Northern Italian: /loto/ 'lotus' ~ /lodo/ 'I praise'
-  - /t/: [t]
-  - /d/: [d]
+<br>
 
-- Spanish: // ~ //
+.pull-left[
+**Northern Italian**
+  - /t/ = [t]
+  - /d/ = [d]
 
-- Mawayana: // ~ //
-
-- Nalöngo: /da/ 'thing' ~ /ta/ 'fall'
-  - /t/: [t] - [tʰ] - [ɾ]
-  - /d/: [ⁿd] - [d]
-
+**Spanish**
+  - /t/ = [t]
+  - /d/ = [d], [ð], [θ]
 ]
 
 .pull-right[
-.center.f2.small-caps[comparative concept]
+**Mawayana** .f6[(Coretta 2013)]
+  - /t/ = [t]
+  - /ɗ/ = [ɗ], [d̰], [d]
+
+**Nalögo** .f6[(Alfarano 2021)]
+  - /t/ = [t], [tʰ], [ɾ]
+  - /d/ = [ⁿd], [d]
 ]
 
----
+]
 
-VE in whispered speech.
+--
 
-VE in word-final-devoicing languages.
+.pull-right[
+.center.f2.small-caps[comparative concept]
 
+<br>
+
+.bg-washed-green.bw2.br3.center[
+<br>
+
+.f2.small-caps[voiceless]
+
+.f2[~]
+
+.f2.small-caps[voiced]
+
+<br>
+]
+
+]
+
+--
+
+.pull-right[
+VE in whispered speech and in word-final-devoicing languages.
+]
 ---
 
 class: inverse center middle
 
-# SLIDO
+# sli.do
 
+# 999000
+
+???
+
+https://app.sli.do/event/bhuf7xqj
 
 ---
 
 # Myths
 
-- The voicing effect is a very common phenomenon.
 
-- Polish and Czech do not show a voicing effect.
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 1**. The voicing effect is a very common phenomenon.
+]
 
-- The magnitude of the voicing effect in English is greater relative to that of other languages.
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 2**. Polish and Czech do not show a voicing effect.
+]
 
-- The ratio of Vowel to Consonant duration is stable across speech rates.
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 3**. The magnitude of the voicing effect in English is greater relative to that of other languages.
+]
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 4**. The ratio of Vowel to Consonant duration is stable across speech rates.
+]
 
 ---
 
-# How common is the voicing effect?
-
 class: middle
+
+# How common is the voicing effect?
 
 ```{r ve-map, echo=FALSE}
 langs <- c("English", "German", "French", "Hungarian", "Gulf Arabic", "Assamese", "Bengali", "Dutch", "Georgian", "Hindi", "Italian", "Icelandic", "Japanese", "Korean", "Lithuanian", "Norwegian", "Spanish", "Swedish", "Telugu", "Russian", "Czech", "Polish")
@@ -138,7 +183,7 @@ pal <- colorFactor(
   domain = unique(ve_langs$fams)
 )
 
-leaflet(ve_langs) %>% 
+leaflet(ve_langs, width = "100%", height = "400") %>% 
   addTiles() %>%
   addCircleMarkers(stroke = FALSE, fillOpacity = 0.8, color = ~pal(fams)) %>%
   addLegend(pal = pal, values = ~fams, title = "Family")
@@ -152,9 +197,13 @@ leaflet(ve_langs) %>%
 
 ---
 
-# Comparative studies
+# Direct comparative studies
 
 
+
+---
+
+# Polish and Czech: do they or do they not?
 
 ---
 
@@ -311,3 +360,13 @@ Mixed results.
 # Accounts
 
 But what is the explanandum?
+
+---
+
+# Summary
+
+
+---
+
+# What's next?
+
