@@ -2,11 +2,15 @@
 title: "The more we learn the less we know"
 subtitle: "(Un)resolved questions on the voicing effect"
 author: "Stefano Coretta"
-institute: "IPS @ LMU Munich"
-date: "2016/12/12 (updated: `r Sys.Date()`)"
+institute: "Institute of Phonetics and Speech Processing, LMU Munich"
+date: "28th July 2021, PhoPho Colloquium at the University of Potsdam"
 output:
   xaringan::moon_reader:
     lib_dir: libs
+    css:
+      - default
+      - ipa-fonts.css
+      - custom.css
     nature:
       highlightStyle: github
       highlightLines: true
@@ -18,7 +22,6 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
-library(sf)
 library(rnaturalearth)
 library(leaflet)
 library(sf)
@@ -72,7 +75,7 @@ class: center middle
 
 ---
 
-# Voicing as a linguistic contrast
+# Voicing as a lexical contrast
 
 .f6[(Haspelmath 2010, 2015, 2020, 2021)]
 
@@ -113,6 +116,8 @@ class: center middle
 .bg-washed-green.bw2.br3.center[
 <br>
 
+.small-caps[voicing]
+
 .f2.small-caps[voiceless]
 
 .f2[~]
@@ -129,6 +134,14 @@ class: center middle
 .pull-right[
 VE in whispered speech and in word-final-devoicing languages.
 ]
+
+
+
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+
 ---
 
 class: inverse center middle
@@ -141,10 +154,18 @@ class: inverse center middle
 
 https://app.sli.do/event/bhuf7xqj
 
+
+
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+
 ---
 
 # Myths
 
+<br>
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt3[
 **Myth 1**. The voicing effect is a very common phenomenon.
@@ -155,12 +176,19 @@ https://app.sli.do/event/bhuf7xqj
 ]
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt3[
-**Myth 3**. The magnitude of the voicing effect in English is greater relative to that of other languages.
+**Myth 3**. The magnitude of the voicing effect in English is greater than that of other languages.
 ]
 
 .bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt3[
-**Myth 4**. The ratio of Vowel to Consonant duration is stable across speech rates.
+**Myth 4**. The voicing effect is modulated by phonological contexts in systematic ways.
 ]
+
+
+
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
 
 ---
 
@@ -189,6 +217,92 @@ leaflet(ve_langs, width = "100%", height = "400") %>%
   addLegend(pal = pal, values = ~fams, title = "Family")
 ```
 
+
+
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+
+---
+
+# Myths
+
+<br>
+
+.bg-washed-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 1**. The voicing effect is a very common phenomenon.
+]
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 2**. Polish and Czech do not show a voicing effect.
+]
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 3**. The magnitude of the voicing effect in English is greater than that of other languages.
+]
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 4**. The voicing effect is modulated by phonological contexts in systematic ways.
+]
+
+
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+
+---
+
+# Polish and Czech: do they or do they not?
+
+<br>
+
+|            | Absence of a VE         | Presence of a VE            |
+|:-----------|:------------------------|:----------------------------|
+| **Polish** | Jassem & Richter (1989) | Slowiaczek & Dinnsen (1985) |
+|            | Keating (1984           | Nowak (2006)                |
+|            | Strycharczuk (2012)     | Malisz & Klessa (2008)      |
+|            |                         | Coretta (2019)              |
+|            |                         |                             |
+| **Czech**  | Keating (1984a)         | Machač & Skarnitzl (2007)   |
+
+
+
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+
+---
+
+# Myths
+
+<br>
+
+.bg-washed-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 1**. The voicing effect is a very common phenomenon.
+]
+
+.bg-washed-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 2**. Polish and Czech do not show a voicing effect.
+]
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 3**. The magnitude of the voicing effect in English is greater than that of other languages.
+]
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 4**. The voicing effect is modulated by phonological contexts in systematic ways.
+]
+
+
+
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+
 ---
 
 # Cross-linguistic differences
@@ -199,17 +313,37 @@ leaflet(ve_langs, width = "100%", height = "400") %>%
 
 # Direct comparative studies
 
+Chen 1970: English, French, Russian, Korean
+
+Mack 1982: English, French, English/French bilinguals
+
+Laeufer 1992: English and French.
+
+Tanner et al. 2019: Varieties of English.
+
+Coretta in progress: English, Italian, Polish.
+
+---
+
+class: center middle
+
+![:scale 80%](img/mar-eff-by-lang.png)
+
+
+
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
 
 
 ---
 
-# Polish and Czech: do they or do they not?
+class: middle
 
----
+# "The voicing effect is phonologised in English"
 
-# Comparison of English, Italian, Polish
-
-
+## de Jong 1991, de Jong 2004, Solé, Beddor & Ohala 2007, Sanker 2019
 
 ---
 
@@ -316,57 +450,207 @@ Every type of sound variation/alternation is "phonologised" (i.e. neuro-cognitiv
 
 
 
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+
 ---
 
-# Contextual effects (within-system)
+# Myths
 
-- Greater effect in pre-pausal words.
+<br>
 
-- Greater effect in stressed vowels.
+.bg-washed-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 1**. The voicing effect is a very common phenomenon.
+]
 
-- Greater effect in word-final syllables.
+.bg-washed-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 2**. Polish and Czech do not show a voicing effect.
+]
 
-- Greater effect in word-initial syllables along the hierarchy trisyllabic > disyllabic > monosyllabic.
+.bg-washed-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 3**. The magnitude of the voicing effect in English is greater than that of other languages.
+]
 
-- Greater effect in lower vowels.
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 4**. The voicing effect is modulated by phonological contexts in systematic ways.
+]
+
+
+
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+
+---
+
+# Contextual effects (in English)
+
+.pull-left[
+## Stop vs fricative
+
+**Greater effect with fricatives than with stops**
+
+- House & Fairbanks (1953),  Laeufer (1992), Zimmerman & Sapon (1958).
+
+**Greater effect with stops than with fricatives**
+
+- Tanner et al. (2019).
+]
 
 --
 
-They all have in common greater baseline vowel duration.
+.pull-right[
+## Stop vs sonorant
+
+**Nasals exercise an intermediate effect** between that of voiceless and voiced stops but closer to that of the latter
+
+- House & Fairbanks (1953), Zimmerman & Sapon (1958).
+
+**Vowels are longer when followed by nasals than when followed by voiced stops**
+
+- Peterson & Lehiste (1960).
+
+**Vowels have the same duration** when followed by nasals and voiced stops.
+
+- Lisker (1974).
+
+]
 
 ---
 
-# Contextual effects (within-system)
+# Contextual effects (in English) 
 
-Manner
+**Narrow focus increases the effect of voicing in English but not in Arabic**
 
-- Stop vs fricative.
+- de Jong 2004.
+- de Jong & Zawaydeh 2002.
 
-- Obstruent vs sonorant.
+**The ratio of vowel-to-consonant duration is the same across speaking rates**
+
+- Port & Dalby 1982.
 
 --
 
-Mixed results.
+## BUT...
+
+**Vowel duration is a more robust cue than vowel-to-consonant ratio**
+
+- Luce & Charles-Luce 1985.
+
+**The ratio of vowel-to-consonant duration DOES change across speaking rates**
+
+- Ko 2018.
+
+---
+
+# Contextual effects (in English) 
+
+- Greater effect in **pre-pausal** words (Umeda 1975).
+
+- Greater effect in **stressed vowels** (Davis & Summers 1989).
+
+- Greater effect in **word-final syllables** (Abdelli-Beruh 2004).
+
+- Greater effect in word-initial syllables along the hierarchy **trisyllabic > disyllabic > monosyllabic** (Port 1981).
+
+- Greater effect in **lower vowels** (Laeufer 1992).
+
+--
+
+<br>
+
+.f2[They all have in common greater baseline vowel duration.]
 
 
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+
+---
+
+# Myths
+
+<br>
+
+.bg-washed-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 1**. The voicing effect is a very common phenomenon.
+]
+
+.bg-washed-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 2**. Polish and Czech do not show a voicing effect.
+]
+
+.bg-washed-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 3**. The magnitude of the voicing effect in English is greater than that of other languages.
+]
+
+.bg-washed-orange.b--dark-orange.ba.bw2.br3.shadow-5.ph4.mt3[
+**Myth 4**. The voicing effect is modulated by phonological contexts in systematic ways.
+]
+
+
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
 
 
 ---
 
-# (Attempted) meta-analysis
+class: center middle inverse
+
+# .small-caps[(attempted) meta-analysis]
+
+???
+
+13 studies. 17 effect estimates (13 word-final, 4 non-word-final).
 
 ---
 
-# Accounts
+class: center middle
 
-But what is the explanandum?
-
----
-
-# Summary
-
+![:scale 80%](img/ve-en-marginal.png)
 
 ---
 
-# What's next?
+class: center middle
 
+![:scale 80%](img/ve-en-shrink.png)
+
+
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+<!-- ----------------------------------------------------------------- -->
+
+---
+
+# HIC SVNT LEONES
+
+<br>
+
+.bg-washed-blue.b--dark-blue.ba.bw2.br3.shadow-5.ph4.mt3[
+**HIGHEST PRIORITY**. Investigation of **un(der)-studied and un(der)-represented** languages.
+]
+
+--
+
+.bg-washed-blue.b--dark-blue.ba.bw2.br3.shadow-5.ph4.mt3[
+**Direct comparison** in cross-linguistic studies.
+]
+
+--
+
+.bg-washed-blue.b--dark-blue.ba.bw2.br3.shadow-5.ph4.mt3[
+**Replication** of prior studies with more appropriate sample sizes.
+]
+
+--
+
+.bg-washed-blue.b--dark-blue.ba.bw2.br3.shadow-5.ph4.mt3[
+**Share data and materials** (experimental materials, statistical analysis code, etc).
+]
