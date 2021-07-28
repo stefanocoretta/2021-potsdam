@@ -136,19 +136,17 @@ VE in **whispered** speech and in **word-final-devoicing** languages.
 <!-- ----------------------------------------------------------------- -->
 <!-- ----------------------------------------------------------------- -->
 
+
+
 ---
 
-class: inverse center middle
+class: center middle inverse
 
-# sli.do
-
-# 999000
+<iframe src="https://wall.sli.do/event/bhuf7xqj" width="1000" height="600" style="border:none;"></iframe>
 
 ???
 
 https://app.sli.do/event/bhuf7xqj
-
-
 
 <!-- ----------------------------------------------------------------- -->
 <!-- ----------------------------------------------------------------- -->
@@ -631,7 +629,7 @@ class: center middle
 
 <br>
 
-.bg-washed-blue.b--dark-blue.ba.bw2.br3.shadow-5.ph4.mt3[
+.bg-washed-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt3[
 **HIGHEST PRIORITY**. Investigation of **un(der)-studied and un(der)-represented** languages.
 ]
 
@@ -652,3 +650,17 @@ class: center middle
 .bg-washed-blue.b--dark-blue.ba.bw2.br3.shadow-5.ph4.mt3[
 **Share data and materials** (experimental materials, statistical analysis code, etc).
 ]
+
+---
+
+class: center middle inverse
+
+![:scale 40%](img/thanks.jpg)
+
+---
+
+class: middle inverse
+
+# References can be found here:
+
+## https://stefanocoretta.github.io/biblio/
