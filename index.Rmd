@@ -80,7 +80,7 @@ class: center middle
 .f6[(Haspelmath 2010, 2015, 2020, 2021)]
 
 .pull-left[
-.center.f2.small-caps[language-particular category]
+.center.f3.small-caps[language-particular category]
 
 <br>
 
@@ -109,30 +109,24 @@ class: center middle
 --
 
 .pull-right[
-.center.f2.small-caps[comparative concept]
+.center.f3.small-caps[comparative concept]
 
 <br>
 
 .bg-washed-green.bw2.br3.center[
-<br>
-
-.small-caps[voicing]
-
-.f2.small-caps[voiceless]
-
-.f2[~]
-
-.f2.small-caps[voiced]
-
-<br>
+.f1.small-caps[voicing]
 ]
+
+<br>
+
+.f2.center.small-caps[voiceless ~ voiced]
 
 ]
 
 --
 
 .pull-right[
-VE in whispered speech and in word-final-devoicing languages.
+VE in **whispered** speech and in **word-final-devoicing** languages.
 ]
 
 
@@ -261,7 +255,7 @@ leaflet(ve_langs, width = "100%", height = "400") %>%
 |            | Absence of a VE         | Presence of a VE            |
 |:-----------|:------------------------|:----------------------------|
 | **Polish** | Jassem & Richter (1989) | Slowiaczek & Dinnsen (1985) |
-|            | Keating (1984           | Nowak (2006)                |
+|            | Keating (1984)          | Nowak (2006)                |
 |            | Strycharczuk (2012)     | Malisz & Klessa (2008)      |
 |            |                         | Coretta (2019)              |
 |            |                         |                             |
@@ -313,15 +307,18 @@ leaflet(ve_langs, width = "100%", height = "400") %>%
 
 # Direct comparative studies
 
-Chen 1970: English, French, Russian, Korean
-
-Mack 1982: English, French, English/French bilinguals
-
-Laeufer 1992: English and French.
-
-Tanner et al. 2019: Varieties of English.
-
-Coretta in progress: English, Italian, Polish.
+.f2[
+- **Chen 1970**
+  - English, French, Russian, Korean
+- **Mack 1982**
+  - English, French, English/French bilinguals
+- **Laeufer 1992**
+  - English and French.
+- **Tanner et al. 2019**
+  - Varieties of English.
+- **Coretta in progress**
+  - English, Italian, Polish.
+]
 
 ---
 
@@ -341,9 +338,11 @@ class: center middle
 
 class: middle
 
-# "The voicing effect is phonologised in English"
+> .f1[The voicing effect is phonologised in English.]
 
-## de Jong 1991, de Jong 2004, Solé, Beddor & Ohala 2007, Sanker 2019
+<br>
+
+.pull-right.f3[— de Jong 1991, de Jong 2004, Solé, Beddor & Ohala 2007, Sanker 2019, ...]
 
 ---
 
@@ -562,7 +561,7 @@ Every type of sound variation/alternation is "phonologised" (i.e. neuro-cognitiv
 
 <br>
 
-.f2[They all have in common greater baseline vowel duration.]
+.f2[These context share greater intrinsic vowel duration.]
 
 
 <!-- ----------------------------------------------------------------- -->
@@ -588,7 +587,7 @@ Every type of sound variation/alternation is "phonologised" (i.e. neuro-cognitiv
 **Myth 3**. The magnitude of the voicing effect in English is greater than that of other languages.
 ]
 
-.bg-washed-orange.b--dark-orange.ba.bw2.br3.shadow-5.ph4.mt3[
+.bg-washed-yellow.b--yellow.ba.bw2.br3.shadow-5.ph4.mt3[
 **Myth 4**. The voicing effect is modulated by phonological contexts in systematic ways.
 ]
 
@@ -613,14 +612,13 @@ class: center middle inverse
 
 class: center middle
 
-![:scale 80%](img/ve-en-marginal.png)
+![:scale 80%](img/ve-en-shrink.png)
 
 ---
 
 class: center middle
 
-![:scale 80%](img/ve-en-shrink.png)
-
+![:scale 80%](img/ve-en-marginal.png)
 
 <!-- ----------------------------------------------------------------- -->
 <!-- ----------------------------------------------------------------- -->
